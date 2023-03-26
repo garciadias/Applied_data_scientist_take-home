@@ -1,8 +1,18 @@
+"""
+Task 1:
+Our partner, a supplement maker, is interested in helping people optimise their vitamin D
+- what could you tell them from the data to help them go to market with their product?
+Please show us how you arrived at this insight.
+"""
 # %%
+# %cd ..
+# %load_ext autoreload
+# %autoreload 2
 import matplotlib.pyplot as plt
 
 from thriva.clean_data import load_clean_data
 from thriva.plots import kde_plot, plot_categorical_percentages, plot_hist_percentages
+
 # %%
 vitamin_d = load_clean_data()
 vitamin_d.head()
