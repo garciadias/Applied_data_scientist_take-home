@@ -13,9 +13,7 @@ import matplotlib.pyplot as plt
 from lightgbm import LGBMClassifier
 from sklearn.dummy import DummyClassifier
 
-# %%
 from thriva.model import ModelSelection, encoded_logistic_regression, prepare_data
-
 # %%
 X_train, X_test, y_train, y_test = prepare_data()
 model_list = [encoded_logistic_regression(), LGBMClassifier(), DummyClassifier()]
@@ -40,3 +38,5 @@ plt.show()
 importances = models_clean.importance_plot()
 importances["LGBMClassifier"]
 plt.savefig("LGBM_feature_importance.png", dpi=300)
+
+# %%
