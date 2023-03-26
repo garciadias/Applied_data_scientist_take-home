@@ -81,8 +81,11 @@ if __name__ == "__main__":
         "Analyte Results Avg Numeric Result": "float64",
     }
     date_cols = ["Tests Completed Month"]
+    print("💾 Loading data...")
     vitamin_d = pd.read_csv(
         "data/vitamin_d_test_results_2022.csv", dtype=dtypes, parse_dates=date_cols
     )
+    print("🧹 Cleaning data...")
     vitamin_d = clean_vitamin_d(vitamin_d)
     vitamin_d.to_csv("data/vitamin_d_test_results_2022_cleaned.csv", index=False)
+    print("🎉 Done!")
