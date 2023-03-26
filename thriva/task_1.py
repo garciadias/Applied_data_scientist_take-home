@@ -56,11 +56,14 @@ kde_plot(vitamin_d, numeric_cols, target)
 plt.savefig("reports/numerical_0_low.png", dpi=300)
 plt.show()
 # %%
+target = "Vitamin D Supplement"
 cat_also_look_at = ["Active Days Walking", "Inactive Time", "Sex"]
 fig = plot_categorical_percentages(vitamin_d, cat_also_look_at, target, bottom=0.25)
 plt.savefig("reports/categorical_2.png", dpi=300)
 plt.show()
 num_also_look_at = ["Tests Completed Month", "Vitamin D Level"]
-kde_plot(vitamin_d, num_also_look_at, "Vitamin D Supplement")
+kde_plot(vitamin_d, num_also_look_at, target)
 plt.savefig("reports/numerical_1.png", dpi=300)
 plt.show()
+
+# %%
